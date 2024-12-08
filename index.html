@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A VanBenschoten Christmas</title>
+    <style>
+        :root {
+            --burgundy: #8B1F1F;
+        }
+        
+        body {
+            font-family: 'Times New Roman', serif;
+            margin: 0;
+            padding: 20px;
+            background: #FFF9F9;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--burgundy);
+        }
+        
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(139, 31, 31, 0.1);
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+        }
+        
+        .border-frame {
+            border: 2px solid var(--burgundy);
+            margin: 20px;
+            padding: 40px;
+            position: relative;
+        }
+        
+        .corner {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border: 2px solid var(--burgundy);
+        }
+        
+        .top-left {
+            top: -2px;
+            left: -2px;
+            border-right: none;
+            border-bottom: none;
+        }
+        
+        .top-right {
+            top: -2px;
+            right: -2px;
+            border-left: none;
+            border-bottom: none;
+        }
+        
+        .bottom-left {
+            bottom: -2px;
+            left: -2px;
+            border-right: none;
+            border-top: none;
+        }
+        
+        .bottom-right {
+            bottom: -2px;
+            right: -2px;
+            border-left: none;
+            border-top: none;
+        }
+
+        h1 {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            font-weight: normal;
+            letter-spacing: 2px;
+        }
+        
+        .title {
+            font-size: 2.5em;
+            margin: 30px 0;
+            letter-spacing: 3px;
+        }
+        
+        .details {
+            margin: 40px 0;
+            font-size: 1.3em;
+            letter-spacing: 1px;
+        }
+        
+        .address {
+            margin: 30px 0;
+            font-size: 1.2em;
+        }
+        
+        .rsvp-section {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid var(--burgundy);
+        }
+        
+        .form-group {
+            margin: 20px 0;
+            text-align: left;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--burgundy);
+            font-weight: bold;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--burgundy);
+            border-radius: 4px;
+            font-size: 1em;
+            font-family: 'Times New Roman', serif;
+        }
+        
+        .submit-btn {
+            background: var(--burgundy);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 4px;
+            font-size: 1.1em;
+            cursor: pointer;
+            margin: 30px auto;
+            font-family: 'Times New Roman', serif;
+            transition: background 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background: #6B1717;
+        }
+        
+        @media (max-width: 600px) {
+            .border-frame {
+                margin: 10px;
+                padding: 20px;
+            }
+            
+            .title {
+                font-size: 2em;
+            }
+            
+            .details {
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="border-frame">
+            <div class="corner top-left"></div>
+            <div class="corner top-right"></div>
+            <div class="corner bottom-left"></div>
+            <div class="corner bottom-right"></div>
+            
+            <h1>YOU ARE INVITED TO</h1>
+            
+            <div class="title">
+                A VANBENSCHOTEN<br>
+                CHRISTMAS
+            </div>
+            
+            <div class="details">
+                WEDNESDAY<br>
+                <span style="font-size: 1.5em;">25</span><br>
+                DECEMBER 2024<br>
+                3:00 PM
+            </div>
+            
+            <div class="address">
+                4985 FAYETTEVILLE -<br>
+                MANLIUS ROAD<br>
+                MANLIUS, NY 13104
+            </div>
+            
+            <div class="rsvp-section">
+                <h2>RSVP</h2>
+                <!-- Replace YOUR_FORMSPREE_ENDPOINT with your actual Formspree endpoint -->
+                <form action="https://formspree.io/f/xeoqwaog" method="POST">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="attendance">Will you be attending?</label>
+                        <select id="attendance" name="attendance" required>
+                            <option value="">Please select...</option>
+                            <option value="yes">Yes, I'll be there!</option>
+                            <option value="no">Sorry, I can't make it</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="guests">Number of Additional Guests</label>
+                        <select id="guests" name="guests">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Send RSVP</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
