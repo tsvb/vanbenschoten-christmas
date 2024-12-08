@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - A Vanbenschoten Christmas</title>
+    <style>
+        :root {
+            --burgundy: #8B1F1F;
+        }
+        
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #FFF9F9;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--burgundy);
+        }
+        
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(139, 31, 31, 0.1);
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+        
+        .message {
+            font-size: 1.2em;
+            margin: 30px 0;
+            line-height: 1.6;
+        }
+        
+        .chart-container {
+            margin: 40px auto;
+            max-width: 100%;
+            overflow: hidden;
+        }
+        
+        .chart-container iframe {
+            max-width: 100%;
+        }
+        
+        .date-reminder {
+            margin-top: 40px;
+            padding: 20px;
+            background: #FFF9F9;
+            border-radius: 8px;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            .message {
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Thank You for Your RSVP!</h1>
+        
+        <div class="message">
+            We're excited to celebrate the holiday season with you. 
+            Below you can see how many others are joining the celebration!
+        </div>
+        
+        <div class="chart-container">
+            <iframe width="323" height="199" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSmfopBXLIw7xMX2wFheDVWTd33pC9H8p0HcDAfdMkB-oTyyopk7M5QiwxkUyNfiSMztjCgKPZpyiJv/pubchart?oid=1269781935&amp;format=interactive"></iframe>
+        </div>
+        
+        <div class="date-reminder">
+            <strong>Save the Date:</strong><br>
+            Wednesday, December 25, 2024 at 3:00 PM<br>
+            4985 Fayetteville - Manlius Road<br>
+            Manlius, NY 13104
+        </div>
+    </div>
+</body>
+</html>
