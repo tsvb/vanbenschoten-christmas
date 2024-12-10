@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
     <title>A Vanbenschoten Christmas</title>
     <style>
         :root {
@@ -32,9 +32,12 @@
         }
         
         .invitation-image {
-            max-width: 100%;
+            max-width: 50%;  /* Changed from 100% to 50% */
             height: auto;
             margin-bottom: 40px;
+            display: block;  /* Added to ensure proper centering */
+            margin-left: auto;  /* Added for horizontal centering */
+            margin-right: auto;  /* Added for horizontal centering */
         }
         
         .rsvp-section {
@@ -101,15 +104,18 @@
                 margin-top: 30px;
                 padding-top: 20px;
             }
+            
+            .invitation-image {
+                max-width: 80%;  /* Slightly larger on mobile for better visibility */
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="invitation.png" alt="A Vanbenschoten Christmas Invitation" class="invitation-image">
+        <img src="/api/placeholder/400/320" alt="A Vanbenschoten Christmas Invitation" class="invitation-image">
         <div class="rsvp-section">
             <h2>RSVP</h2>
-            <!-- Replace YOUR_FORMSPREE_ENDPOINT with your actual Formspree endpoint -->
             <form action="https://formspree.io/f/xeoqwaog" method="POST">
                 <div class="form-group">
                     <label for="name">Full Name</label>
