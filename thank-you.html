@@ -47,7 +47,6 @@
         .chart-container {
             margin: 40px auto;
             width: 100%;
-            /* 16:9 aspect ratio container */
             padding-top: 56.25%;
             position: relative;
         }
@@ -62,10 +61,13 @@
         }
         
         .date-reminder {
-            margin-top: 40px;
+            margin-bottom: 40px;
             padding: 20px;
-            background: #FFF9F9;
+            background: var(--burgundy);
+            color: white;
             border-radius: 8px;
+            font-size: 1.2em;
+            font-weight: bold;
         }
         
         @media (max-width: 600px) {
@@ -85,6 +87,13 @@
 </head>
 <body>
     <div class="container">
+        <div class="date-reminder">
+            <strong>Save the Date:</strong><br>
+            Wednesday, December 25, 2024 at 3:00 PM<br>
+            4985 Fayetteville - Manlius Road<br>
+            Manlius, NY 13104
+        </div>
+        
         <h1>Thank You for Your RSVP!</h1>
         
         <div class="message">
@@ -94,18 +103,11 @@
         
         <div class="chart-container">
             <iframe 
-                src="httpss://docs.google.com/spreadsheets/d/e/2PACX-1vSmfopBXLIw7xMX2wFheDVWTd33pC9H8p0HcDAfdMkB-oTyyopk7M5QiwxkUyNfiSMztjCgKPZpyiJv/pubchart?oid=1269781935&format=interactive"
+                src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSmfopBXLIw7xMX2wFheDVWTd33pC9H8p0HcDAfdMkB-oTyyopk7M5QiwxkUyNfiSMztjCgKPZpyiJv/pubchart?oid=1269781935&format=interactive"
                 frameborder="0" 
                 scrolling="no" 
                 style="width: 100%; border: none;">
             </iframe>
-        </div>
-        
-        <div class="date-reminder">
-            <strong>Save the Date:</strong><br>
-            Wednesday, December 25, 2024 at 3:00 PM<br>
-            4985 Fayetteville - Manlius Road<br>
-            Manlius, NY 13104
         </div>
     </div>
 </body>
