@@ -13,22 +13,51 @@
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
             margin: 0;
             padding: 20px;
-            background: #FFF9F9;
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
+            background: radial-gradient(circle, rgba(255,239,239,1) 0%, rgba(230,179,179,1) 50%, rgba(139,31,31,1) 100%);
             color: var(--burgundy);
+            position: relative;
+        }
+        
+        /* Math-based animated background */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-radial-gradient(circle at center, 
+                rgba(255, 255, 255, 0.05), 
+                rgba(255, 255, 255, 0.05) 5%, 
+                rgba(139, 31, 31, 0.1) 5%, 
+                rgba(139, 31, 31, 0.1) 10%);
+            animation: spin 20s linear infinite;
+            z-index: 0;
+        }
+        
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
         }
         
         .container {
-            background: white;
+            background: rgba(255, 255, 255, 0.9);
             padding: 40px;
             border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(139, 31, 31, 0.1);
+            box-shadow: 0 4px 20px rgba(139, 31, 31, 0.2);
             max-width: 800px;
             width: 100%;
             text-align: center;
+            z-index: 1;
+            position: relative;
         }
         
         h1 {
