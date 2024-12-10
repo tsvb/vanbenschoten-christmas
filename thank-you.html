@@ -7,22 +7,25 @@
     <style>
         :root {
             --burgundy: #8B1F1F;
+            --cream: #FFF9F9;
+            --soft-red: #E6B3B3;
+            --light-burgundy: #B35555;
         }
         
         body {
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
             margin: 0;
-            padding: 20px;
+            padding: 0;
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            background: radial-gradient(circle, rgba(255,239,239,1) 0%, rgba(230,179,179,1) 50%, rgba(139,31,31,1) 100%);
+            background: radial-gradient(circle, var(--cream) 0%, var(--soft-red) 50%, var(--burgundy) 100%);
             color: var(--burgundy);
             position: relative;
         }
         
-        /* Math-based animated background */
+        /* Animated concentric circle overlay */
         body::before {
             content: '';
             position: absolute;
@@ -31,10 +34,10 @@
             width: 100%;
             height: 100%;
             background: repeating-radial-gradient(circle at center, 
-                rgba(255, 255, 255, 0.05), 
-                rgba(255, 255, 255, 0.05) 5%, 
-                rgba(139, 31, 31, 0.1) 5%, 
-                rgba(139, 31, 31, 0.1) 10%);
+                rgba(255, 255, 255, 0.1), 
+                rgba(255, 255, 255, 0.1) 5%, 
+                rgba(139, 31, 31, 0.05) 5%, 
+                rgba(139, 31, 31, 0.05) 10%);
             animation: spin 20s linear infinite;
             z-index: 0;
         }
@@ -49,10 +52,10 @@
         }
         
         .container {
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.95);
             padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(139, 31, 31, 0.2);
+            border-radius: 12px;
+            box-shadow: 0 6px 30px rgba(139, 31, 31, 0.3);
             max-width: 800px;
             width: 100%;
             text-align: center;
@@ -61,14 +64,15 @@
         }
         
         h1 {
-            font-size: 2em;
+            font-size: 2.5em;
             margin-bottom: 20px;
-            font-weight: 500;
+            font-weight: 600;
             letter-spacing: 1px;
+            color: var(--burgundy);
         }
         
         .message {
-            font-size: 1.2em;
+            font-size: 1.3em;
             margin: 30px 0;
             line-height: 1.6;
         }
@@ -86,13 +90,13 @@
             left: 0;
             width: 100%;
             height: 100%;
-            min-height: 300px;
+            border: none;
         }
         
         .date-reminder {
             margin-bottom: 40px;
             padding: 20px;
-            background: var(--burgundy);
+            background: var(--light-burgundy);
             color: white;
             border-radius: 8px;
             font-size: 1.2em;
@@ -134,8 +138,7 @@
             <iframe 
                 src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSmfopBXLIw7xMX2wFheDVWTd33pC9H8p0HcDAfdMkB-oTyyopk7M5QiwxkUyNfiSMztjCgKPZpyiJv/pubchart?oid=1269781935&format=interactive"
                 frameborder="0" 
-                scrolling="no" 
-                style="width: 100%; border: none;">
+                scrolling="no">
             </iframe>
         </div>
     </div>
