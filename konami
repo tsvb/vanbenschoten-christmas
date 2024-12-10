@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Christmas Scene</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="scene">
+    <div class="sky">
+      <div class="santa-sleigh">
+        🎅✨✨✨🦌🦌🦌
+      </div>
+    </div>
+    <div class="ground">
+      <div class="tree">
+        🎄
+      </div>
+      <div class="family">
+        👨‍👩‍👦‍👦👵👴
+      </div>
+      <div class="friends">
+        👩‍❤️‍👩👨‍❤️‍👨👫
+      </div>
+      <div class="pets">
+        🐶🐱🐾
+      </div>
+    </div>
+  </div>
+</body>
+</html>
