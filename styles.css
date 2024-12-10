@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #001f3f;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.scene {
+  width: 90%;
+  height: 90%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.sky {
+  flex: 2;
+  background: linear-gradient(to bottom, #001f3f, #0074D9);
+  position: relative;
+}
+
+.santa-sleigh {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  font-size: 2em;
+  animation: fly 10s linear infinite;
+}
+
+@keyframes fly {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(120vw); }
+}
+
+.ground {
+  flex: 1;
+  background: #2ECC40;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding: 20px;
+}
+
+.tree {
+  font-size: 3em;
+}
+
+.family, .friends, .pets {
+  font-size: 2em;
+}
