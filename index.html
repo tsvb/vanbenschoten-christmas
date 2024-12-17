@@ -32,12 +32,12 @@
         }
         
         .invitation-image {
-            max-width: 50%;  /* Changed from 100% to 50% */
+            max-width: 50%;
             height: auto;
             margin-bottom: 40px;
-            display: block;  /* Added to ensure proper centering */
-            margin-left: auto;  /* Added for horizontal centering */
-            margin-right: auto;  /* Added for horizontal centering */
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .rsvp-section {
@@ -106,7 +106,7 @@
             }
             
             .invitation-image {
-                max-width: 80%;  /* Slightly larger on mobile for better visibility */
+                max-width: 80%;
             }
         }
     </style>
@@ -137,13 +137,17 @@
                 </div>
                 
                 <div class="form-group">
-                    <label for="guests">Number of Additional Guests</label>
+                    <label for="guests">Total number of guests</label>
                     <select id="guests" name="guests">
                         <option value="0">0</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
                     </select>
                 </div>
                 <button type="submit" class="submit-btn">Send RSVP</button>
